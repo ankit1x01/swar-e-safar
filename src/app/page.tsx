@@ -69,13 +69,13 @@ export default function Home() {
               </h2>
               <div className="space-y-3 text-gray-200 leading-relaxed">
                 <p className="text-lg md:text-xl font-light italic">
-                  "Healing isn't a destination — it's a journey."
+                  &ldquo;Healing isn&apos;t a destination — it&apos;s a journey.&rdquo;
                 </p>
                 <p className="text-base md:text-lg">
                   A journey within. A voyage toward wholeness.
                 </p>
                 <p className="text-base md:text-lg">
-                  Shifoyage blends <span className="text-indigo-300 font-semibold">'Shifa'</span> (healing) and <span className="text-purple-300 font-semibold">'Voyage'</span> (journey) —
+                  Shifoyage blends <span className="text-indigo-300 font-semibold">&lsquo;Shifa&rsquo;</span> (healing) and <span className="text-purple-300 font-semibold">&lsquo;Voyage&rsquo;</span> (journey) —
                 </p>
                 <p className="text-base md:text-lg">
                   inviting you into spaces where transformation happens gently, soulfully, and together.
