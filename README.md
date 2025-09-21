@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Swar-e-Safar 🎵
+
+**Your Musical Journey Through Lyrics**
+
+A beautiful Next.js application that displays a listing of songs and shows their lyrics with integrated advertisements.
+
+## Features
+
+✨ **Song Listing**: Browse through a collection of songs with artist information  
+🎼 **Lyrics Display**: Click on any song to view its complete lyrics  
+📱 **Responsive Design**: Beautiful gradient backgrounds and responsive layout  
+💰 **Advertisement Integration**: Contextual ads displayed at the end of each lyrics page  
+🔍 **Easy Navigation**: Smooth transitions between song list and individual song pages  
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js (v18 or later)
+- npm or yarn
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Installation
+
+1. Clone or navigate to the project directory
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3001](http://localhost:3001) in your browser
+
+## Adding Your Own Songs
+
+### CSV Format
+
+Replace the `/public/songs.csv` file with your own song data. The CSV should have the following columns:
+
+```csv
+title,artist,lyrics,album,genre,duration
+"Song Title","Artist Name","Line 1
+Line 2
+Line 3","Album Name","Genre","Duration"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Important Notes:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Lyrics**: Use line breaks within the quotes to separate verses
+- **Multi-line Support**: The app handles multi-line lyrics properly
+- **Optional Fields**: Album, genre, and duration are optional but recommended
+- **File Location**: Place your CSV file in the `public` folder as `songs.csv`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Example CSV Structure:
 
-## Learn More
+```csv
+title,artist,lyrics,album,genre,duration
+"My Song","Artist Name","This is line 1
+This is line 2
+This is the chorus","My Album","Pop","3:45"
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── layout.tsx          # Main layout and metadata
+│   ├── page.tsx            # Home page with song listing
+│   └── song/[id]/
+│       └── page.tsx        # Individual song lyrics page
+├── components/
+│   └── AdComponent.tsx     # Advertisement component
+├── types/
+│   └── song.ts             # TypeScript interfaces
+└── utils/
+    └── csvParser.ts        # CSV parsing utilities
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling and responsive design
+- **Papa Parse** - CSV parsing
+- **React Hooks** - State management
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Styling
+- Modify the gradient backgrounds in `page.tsx` files
+- Update Tailwind classes for different color schemes
+- Customize the glass-morphism effects
+
+### Advertisements
+- Edit `src/components/AdComponent.tsx` to customize ad content
+- Add real advertisement integration (Google AdSense, etc.)
+- Implement different ad types or rotations
+
+### Features to Add
+- Search functionality
+- Artist filtering
+- Favorites system
+- Audio playback integration
+- User ratings and comments
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## License
+
+This project is created for educational purposes. Please ensure you have proper rights to any song lyrics you include.
